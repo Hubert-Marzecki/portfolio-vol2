@@ -1,0 +1,45 @@
+@keyframes static {
+    0% {top: -100px;}
+    20% {top: 10px}
+    100% {top: 0px;}
+  }
+@keyframes mymove {
+    0% {top: 0px;}
+    20% {top: 10px}
+    100% {top: -200px;}
+  }
+  
+
+.header{
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    z-index: 100;
+    &--visible{
+    animation: static 0.5s ease;
+    }
+    &--hidden{
+        top: -200px;
+        animation: mymove 0.5s ease;
+    }
+
+    .logo__holder{
+        margin-left: 90px;
+        cursor: pointer;
+    }
+    .nav__element{
+        margin-right: 100px;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        width: 200px;
+        font-size: 16px;
+
+    }
+    .nav__link{
+        cursor: pointer;
+    }
+}
